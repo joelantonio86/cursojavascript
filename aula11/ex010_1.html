@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de nacionalidade</title>
+</head>
+
+<body>
+    <h1>Sistemas de Nacionalidade</h1>
+    Qual país você está vivendo: <input type="text" name="nacionalidade" id="nacionalidade">
+    <Km>
+        <input type="button" value="Verificar" onclick="validar()">
+        <div id="nac">
+
+        </div>
+        <script>
+
+            function validar() {
+                var origem = window.document.querySelector('input#nacionalidade') //Seleciona o valor na caixa de texto e joga na variável "origem"
+                var nac = window.document.querySelector('div#nac') // essa é outra forma de fazer, tanto faz
+                var nacio = (nacionalidade.value)
+                if (nacio != 'Brasil') {
+                    nac.innerHTML += `<p> Você pertence ao país <strong>${nacio}</strong>  portanto, Você é estrangeiro!</p>`
+                } else {
+                    nac.innerHTML += `<p> Você pertence ao país <strong>${nacio}</strong>, então cocê é Brasileiro!</p>`
+                }
+            }
+
+        </script>
+</body>
+
+</html>
